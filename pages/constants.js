@@ -1,4 +1,4 @@
-export const dataText = {
+export const DataText = {
   Index: {
     indexTitle: "about us",
     indexTitle2: "Lorem Ipsum",

@@ -5,7 +5,7 @@ import SectionContainer from "./components/sectionContainer/sectionContainer";
 import Slider from "./components/slider/slider";
 import MidSection from "./components/midSection/midSection";
 import TopSection from "./components/topSection/topSection";
-import { dataText } from "./constants";
+import { DataText } from "./constants";
 
 interface Props {
   data: any;
@@ -15,7 +15,7 @@ export default function Home({ data }: Props) {
     <div className={styles.container}>
       <div className={styles.background}>
         <div className={styles.backgroundAboutUsText}>
-          {data.dataText.Index.indexTitle}
+          {data.DataText.Index.indexTitle}
         </div>
         <div className={styles.backgroundAboutUs}></div>
       </div>
@@ -23,21 +23,21 @@ export default function Home({ data }: Props) {
         <div className={styles.contentFloat}>
           <div className={styles.contentLeft}>
             <div className={styles.contentFloatTitle}>
-              {data.dataText.Index.indexTitle2}
+              {data.DataText.Index.indexTitle2}
             </div>
           </div>
           <div className={styles.contentRight}>
             <div className={styles.contentFloatText}>
-              {data.dataText.Index.indexText}
+              {data.DataText.Index.indexText}
             </div>
           </div>
         </div>
-        <TopSection data={data.dataText.topSection} />
-        <MidSection data={data.dataText.midSection} />
-        <Slider data={data.dataText.slider} />
-        <SectionContainer data={data.dataText.section} />
-        <Map data={data.dataText.map} />
-        <Partners data={data.dataText.partners} />
+        <TopSection data={data.DataText.topSection} />
+        <MidSection data={data.DataText.midSection} />
+        <Slider data={data.DataText.slider} />
+        <SectionContainer data={data.DataText.section} />
+        <Map data={data.DataText.map} />
+        <Partners data={data.DataText.partners} />
       </div>
     </div>
   );
@@ -46,7 +46,7 @@ export default function Home({ data }: Props) {
 export async function getStaticProps() {
   return {
     props: {
-      data: { dataText },
+      data: { DataText },
     },
     revalidate: 1,
   };
