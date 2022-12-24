@@ -1,0 +1,69 @@
+@import "../../../styles/globals.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+.primary > button {
+  font-family: $boldFont;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $secondaryColor;
+  color: $white;
+  background: linear-gradient(
+    to right bottom,
+    $secondaryColor 40%,
+    $mainColor 50%
+  );
+  background-size: 200% 300%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+}
+.primary > button:hover {
+  background-position: left top;
+}
+
+.secondary {
+  display: flex;
+  align-items: center;
+}
+
+.secondary > button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: $mainColor;
+  font-family: $boldFont;
+  font-size: $smallText;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+}
+.secondary:hover button:before {
+  opacity: 1;
+  margin-left: -2rem;
+}
+.secondary:hover button:after {
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+.secondary > button:hover {
+  color: $secondaryColor;
+}
+.secondary > button::after {
+  content: url(../../../images/buttonArrow.svg);
+  opacity: 1;
+  transition: 0.3s;
+  padding: 0 0.5rem;
+  margin-right: 1rem;
+}
+.secondary > button::before {
+  content: url(../../../images/buttonArrow.svg);
+  margin-left: -4rem;
+  opacity: 0;
+  padding-right: 0.5rem;
+  transition: 0.3s;
+}

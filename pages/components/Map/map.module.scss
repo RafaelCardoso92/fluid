@@ -1,0 +1,135 @@
+@import "../../../styles/globals.scss";
+.mapContainer {
+  background-color: $mainColor;
+}
+.mapTitle {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  font-size: $midTitle;
+  padding: 5rem 0 3rem 0;
+  font-family: $boldFont;
+}
+.mapContentContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+.mapContentText {
+  color: $white;
+  font-size: $midText;
+  font-family: $boldFont;
+}
+.mapContent {
+  display: flex;
+  align-items: center;
+}
+.mapContent {
+  img {
+    margin-right: 1rem;
+    width: 4rem;
+  }
+}
+.mapImage {
+  margin: 1rem;
+  height: 40rem;
+  background-image: url(../../../images/map.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.magicBox1 {
+  width: 100%;
+  height: 100%;
+}
+.magicBox2 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+.magicBox2:hover {
+  opacity: 1;
+}
+
+.magicBox3 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+.magicBox3:hover {
+  opacity: 1;
+}
+.magicBox4 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+.magicBox4:hover {
+  opacity: 1;
+}
+.magicBox5 {
+  width: 100%;
+  height: 100%;
+}
+
+.magicBox6 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+.magicBox6:hover {
+  opacity: 1;
+}
+.magicBox6:hover + .box {
+  height: 20rem;
+}
+.box {
+  overflow-y: clip;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+@media (max-width: 768px) {
+  .mapContentContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+  }
+
+  .mapContentContainer {
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+  .mapTitle {
+    text-align: center;
+    padding: 2rem 0 0rem 0;
+  }
+  .mapImage {
+    height: 20rem;
+  }
+}
