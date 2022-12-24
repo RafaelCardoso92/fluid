@@ -6,7 +6,7 @@ import Citygate from "../../../images/Citygate.png";
 import Hendy from "../../../images/Hendy.png";
 import Vindis from "../../../images/Vindis.png";
 import Superbike from "../../../images/SuperbikeFactory.png";
-import Renault from "../../../images/RenaultRetailGroup.png";
+import Renault from "../../../images/Renault.png";
 import Halliwell from "../../../images/HalliwellJones.png";
 import Acorn from "../../../images/acorn.svg";
 import Jct from "../../../images/jct600.png";
