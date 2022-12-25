@@ -141,3 +141,9 @@
     display: unset;
   }
 }
+@media (max-width: 350px) {
+  .contentTop {
+    font-size: $xsmallTitle;
+    line-height: 2rem;
+  }
+}

@@ -134,7 +134,19 @@
   }
 }
 @media (max-width: 350px) {
+  .mapTitle {
+    font-size: $smallTitle;
+  }
   .mapImage {
     height: 12rem;
+  }
+
+  .mapContent {
+    img {
+      width: 3rem;
+    }
+    .mapContentText {
+      font-size: $smallText;
+    }
   }
 }
