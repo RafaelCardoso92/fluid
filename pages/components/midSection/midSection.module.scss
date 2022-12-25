@@ -87,3 +87,8 @@
     padding-bottom: 1rem;
   }
 }
+@media (max-width: 350px) {
+  .midContainer {
+    background-size: 47rem 37rem;
+  }
+}

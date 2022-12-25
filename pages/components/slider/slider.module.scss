@@ -68,3 +68,11 @@
     font-size: $smallTitle;
   }
 }
+@media (max-width: 350px) {
+  .contentSlider {
+    padding: 2rem 2rem;
+  }
+  .dataText {
+    padding: 0rem;
+  }
+}

@@ -51,12 +51,12 @@
 .rightImage {
   padding: 2rem;
 }
+
 @media (max-width: 768px) {
   .partnersContainer {
     flex-direction: column;
   }
-  .partnersLeftContainer {
-  }
+
   .partnersRightContainer {
     margin-top: 2rem;
   }
@@ -84,7 +84,14 @@
     padding: 1rem 0.5rem 1rem 0.5rem;
   }
 }
-
+@media (max-width: 350px) {
+  .dealers {
+    grid-template-columns: 1fr;
+  }
+  .manufacturers {
+    grid-template-columns: 1fr;
+  }
+}
 /* Tablet and Smaller Desktop */
 @media (min-width: 769px) and (max-width: 1350px) {
   .dealers {
