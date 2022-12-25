@@ -2,13 +2,12 @@ import styles from "./midSection.module.scss";
 import Image from "next/image";
 import Button from "../button/button";
 import Mask from "../../../images/Mask.png";
-interface Props {
-  data: {
-    text: string;
-    title: string;
-  };
-}
+interface Props {}
 export default function MidSection(props: Props) {
+  const midSection = {
+    title: "Lorem Ipsum",
+    text: "We are one GardX. Whichever business we are representing, our brand mission and values should be at the heart of what we do.",
+  };
   return (
     <div className={styles.midContainer}>
       <div className={styles.contentLeft}>
@@ -18,8 +17,8 @@ export default function MidSection(props: Props) {
       </div>
       <div className={styles.contentRight}>
         <div className={styles.midContent}>
-          <div className={styles.midContentTitle}>{props.data.title}</div>
-          <div className={styles.midContentText}>{props.data.text}</div>
+          <div className={styles.midContentTitle}>{midSection.title}</div>
+          <div className={styles.midContentText}>{midSection.text}</div>
           <div className={styles.midButton}>
             <Button variant="primary" text="button" />
           </div>

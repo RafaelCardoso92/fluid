@@ -21,12 +21,7 @@ import PSA from "../../../images/PSA.png";
 import MG from "../../../images/MG.png";
 import Mazda from "../../../images/Mazda.png";
 
-interface Props {
-  data: {
-    title1: string;
-    title2: string;
-  };
-}
+interface Props {}
 export default function Partners(props: Props) {
   const leftImages = [
     Cambria,
@@ -51,10 +46,15 @@ export default function Partners(props: Props) {
     MG,
     Mazda,
   ];
+
+  const partners = {
+    title1: "dealer groups",
+    title2: "manufacturers",
+  };
   return (
     <div className={styles.partnersContainer}>
       <div className={styles.partnersLeftContainer}>
-        <div className={styles.leftTitle}>{props.data.title1}</div>
+        <div className={styles.leftTitle}>{partners.title1}</div>
         <div className={styles.dealers}>
           {leftImages.map((leftImage, index) => (
             <div className={styles.leftImage} key={index}>
@@ -65,7 +65,7 @@ export default function Partners(props: Props) {
       </div>
       <div className={styles.divider} />
       <div className={styles.partnersRightContainer}>
-        <div className={styles.rightTitle}>{props.data.title2}</div>
+        <div className={styles.rightTitle}>{partners.title2}</div>
         <div className={styles.manufacturers}>
           {rightImages.map((rightImage, index) => (
             <div className={styles.rightImage} key={index}>

@@ -5,17 +5,22 @@ import SectionContainer from "./components/sectionContainer/sectionContainer";
 import Slider from "./components/slider/slider";
 import MidSection from "./components/midSection/midSection";
 import TopSection from "./components/topSection/topSection";
-import { DataText } from "./constants";
 
-interface Props {
-  data: any;
-}
-export default function Home({ data }: Props) {
+export default function Home() {
+  const DataText = {
+    Index: {
+      indexTitle: "about us",
+      indexTitle2: "Lorem Ipsum",
+      indexText:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo duodolores et ea rebum. Stet clita kasd gubergren, no sea takimatasanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ",
+    },
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.background}>
         <div className={styles.backgroundAboutUsText}>
-          {data.DataText.Index.indexTitle}
+          {DataText.Index.indexTitle}
         </div>
         <div className={styles.backgroundAboutUs}></div>
       </div>
@@ -23,31 +28,22 @@ export default function Home({ data }: Props) {
         <div className={styles.contentFloat}>
           <div className={styles.contentLeft}>
             <div className={styles.contentFloatTitle}>
-              {data.DataText.Index.indexTitle2}
+              {DataText.Index.indexTitle2}
             </div>
           </div>
           <div className={styles.contentRight}>
             <div className={styles.contentFloatText}>
-              {data.DataText.Index.indexText}
+              {DataText.Index.indexText}
             </div>
           </div>
         </div>
-        <TopSection data={data.DataText.topSection} />
-        <MidSection data={data.DataText.midSection} />
-        <Slider data={data.DataText.slider} />
-        <SectionContainer data={data.DataText.section} />
-        <Map data={data.DataText.map} />
-        <Partners data={data.DataText.partners} />
+        <TopSection />
+        <MidSection />
+        <Slider />
+        <SectionContainer />
+        <Map />
+        <Partners />
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      data: { DataText },
-    },
-    revalidate: 1,
-  };
 }
